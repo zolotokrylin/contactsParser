@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Twitter parser</title>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<div id="content"></div>
+</body>
+</html>
+
+<script type="text/javascript">
+
+
+var users;
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    users = JSON.parse(this.responseText);
+    format();
+  }
+};
+xmlhttp.open("GET", "twitter.json", true);
+xmlhttp.send();
+
+function format() {
+	var el = document.getElementById("content");
+	for (var i = users.length - 1; i >= 0; i--) {
+		var row = "≠"+ "https://twitter.com/"+users[i].screen_name +"≠"+ users[i].description.replace(/(\r\n|\n|\r)/gm, " ") +"≠"+ users[i].followers_count +"≠"+ users[i].protected +"≠"+ "https://twitter.com/messages/compose?recipient_id="+users[i].id +"≠" + "<br>"
+		console.log(row);
+		el.innerHTML += row;
+
+	}
+}
+
+</script>
+
