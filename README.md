@@ -2,6 +2,13 @@
 
 ## Preparing environment
 
+### Before you start
+
+- You need to obtain access key from (Twitter Developer account)[https://developer.twitter.com/]
+- You need python being installed
+
+### Making request
+
 - Open Terminal on Mac and go to this folder (example `cd ~/Development/twitter_parser`)
 - Run in Terminal `python -m SimpleHTTPServer & open -a Google\ Chrome http://localhost:8000/twitter_search.html`
 
