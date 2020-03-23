@@ -4,8 +4,8 @@
 
 ### Before you start
 
-- You need to obtain access key from (Twitter Developer account)[https://developer.twitter.com/]
-- You need python being installed
+- You need to obtain access keyes from (Twitter Developer account)[https://developer.twitter.com/]
+- You need Python being installed, so you can run webserver
 
 ### Making request
 
